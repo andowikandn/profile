@@ -1,117 +1,417 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ahmad Wikandono - QA Engineer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QA Engineer Portfolio</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
     }
+  </script>
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-      color: #fff;
-      line-height: 1.6;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      overflow-x: hidden;
-    }
-
-    .container {
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(10px);
-      border-radius: 16px;
-      padding: 40px;
-      max-width: 600px;
-      width: 100%;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-      animation: fadeInUp 1s ease-out;
-    }
-
-    @keyframes fadeInUp {
-      0% {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 1.1rem;
-      margin-bottom: 20px;
-      color: #ddd;
-    }
-
-    .contact-info {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .contact-info a {
-      color: #00d9ff;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    .contact-info a:hover {
-      color: #ff6ec4;
-    }
-
-    @media (max-width: 600px) {
-      .container {
-        padding: 25px;
-      }
-
-      h1 {
-        font-size: 2rem;
-      }
-    }
-  </style>
 </head>
 
-<body>
-  <div class="container">
-    <h1>Ahmad Wikandono</h1>
-    <p>Software QA Engineer</p>
-    <p>Skilled in analyzing product requirements,
-      designing test plans and test cases, and
-      performing through manual and functional
-      testing. Currently still expanding skills to
-      automation testing using Selenium for web,
-      and Appium for mobile apps with Python programming.</p>
-    <p>Detail-oriented and analytical, with a
-      strong foundation in critical thinking and a growing
-      proficiency in automation testing. Proven ability to
-      work efficiently in Agile environments and ensure
-      high-quality product releases across web and
-      mobile platforms.</p>
-    
-    <div class="contact-info">
-      <h2>Contact Me</h2>
-      <a href="mailto:ahmad.wikandono@gmail.com">📧 ahmad.wikandono@gmail.com</a>
-      <a href="https://instagram.com/andowikandn" target="_blank">📸 Instagram: @andowikandn</a>
-      <a href="https://www.linkedin.com/in/ahmad-wikandono" target="_blank">💼 LinkedIn: Ahmad Wikandono</a>
+<body class="bg-stone-50 dark:bg-gray-900 text-stone-800 dark:text-gray-100">
+
+  <!-- Navbar -->
+  <nav class="fixed w-full z-10 bg-stone-200/90 dark:bg-gray-900/80 backdrop-blur-md shadow-md">
+    <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+      <h1 class="text-2xl font-bold text-black-600">✨</h1>
+
+      <!-- Menu desktop -->
+      <ul class="hidden md:flex gap-20 font-medium">
+        <li><a href="#home" class="hover:text-blue-500">Home</a></li>
+        <li><a href="#career" class="hover:text-blue-500">Career</a></li>
+        <li><a href="#skills" class="hover:text-blue-500">Skills</a></li>
+        <li><a href="#social" class="hover:text-blue-500">Social</a></li>
+      </ul>
+
+      <!-- Dark mode toggle -->
+      <button id="modeToggle" class="ml-4 text-xl">🌙</button>
+
+      <!-- Hamburger menu (mobile) -->
+      <button id="menuBtn" class="ml-4 md:hidden text-2xl">☰</button>
     </div>
-  </div>
+
+    <!-- Dropdown mobile -->
+    <div id="mobileMenu" class="hidden md:hidden flex flex-col gap-4 p-4 bg-stone-200 dark:bg-gray-800">
+      <a href="#home" class="mobile-link hover:text-blue-500">Home</a>
+      <a href="#career" class="mobile-link hover:text-blue-500">Career</a>
+      <a href="#skills" class="mobile-link hover:text-blue-500">Skills</a>
+      <a href="#social" class="mobile-link hover:text-blue-500">Social</a>
+    </div>
+  </nav>
+
+  <!-- Home -->
+  <section id="home" class="min-h-screen flex flex-col justify-center items-center px-6 pt-24 
+         bg-gradient-to-r from-stone-100 to-stone-200 dark:from-gray-800 dark:to-gray-900">
+
+    <h2 class="text-4xl md:text-4xl font-bold mb-6 text-center">Hi, I’m Ando 👋</h2>
+
+    <div class="max-w-3xl mx-auto space-y-6 text-left">
+
+      <p class="text-lg md:text-xl leading-relaxed">
+        I am a Software QA Engineer with 5 years of experience and a total of more than 8 years in various technology
+        industries.
+        Starting from manual testing, I now focus on developing automation for web & mobile apps
+        with Python, Selenium, Appium, Pytest, and Allure Report.
+      </p>
+
+      <p class="text-lg md:text-xl leading-relaxed">
+        I am accustomed to creating test plans, ensuring quality through modern testing, and collaborating
+        in Agile teams so that products are released with the highest standards. 🚀
+      </p>
+
+      <p class="text-lg md:text-xl leading-relaxed">
+        Currently focused on developing scalable automation frameworks, integrating with CI/CD,
+        and ensuring the quality of web and mobile applications is maintained through modern testing.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- Career -->
+  <section id="career" class="min-h-screen flex flex-col justify-center px-6 py-16">
+    <h2 class="text-3xl font-bold text-center mb-10">Career Journey 🧑🏼‍💻</h2>
+
+    <div class="max-w-3xl mx-auto space-y-8">
+
+      <!-- Role 1 -->
+      <div class="p-6 rounded-2xl shadow-md bg-stone-200 dark:bg-gray-700 
+            hover:shadow-lg hover:scale-[1.02] transition duration-500">
+        <h3 class="text-xl font-semibold mb-2">Device Bundling Admin ✨ Januari - Maret 2015</h3>
+        <p class="text-stone-700 dark:text-gray-300 font-medium mb-3">
+          Telkomsel
+        </p>
+        <p class="text-stone-700 dark:text-gray-300">
+          Assisting users in the process of redeeming points and cashback, compiling KartuHalo data reports,
+          and developing a web-based information system for membership.
+      </div>
+
+      <!-- Role 2 -->
+      <div class="p-6 rounded-2xl shadow-md bg-stone-200 dark:bg-gray-700 
+            hover:shadow-lg hover:scale-[1.02] transition duration-500">
+        <h3 class="text-xl font-semibold mb-2">Database Administrator ✨ Juni - Juli 2016 </h3>
+
+        <p class="text-stone-700 dark:text-gray-300 font-medium mb-3">
+          Erasoft Indonesia
+        </p>
+
+        <p class="text-stone-700 dark:text-gray-300">
+          Experienced in using MySQL for basic queries, managing and updating data,
+          as well as handling simple issues in databases.
+        </p>
+      </div>
+
+      <!-- Role 3 -->
+      <div class="p-6 rounded-2xl shadow-md bg-stone-200 dark:bg-gray-700 
+            hover:shadow-lg hover:scale-[1.02] transition duration-500">
+        <h3 class="text-xl font-semibold mb-2">Product Quality Assurance ✨ Agustus 2016 - Juni 2018</h3>
+
+        <p class="text-stone-700 dark:text-gray-300 font-medium mb-3">
+          Indosat Ooredoo
+        </p>
+
+        <p class="text-stone-700 dark:text-gray-300">
+          Performing automated testing of roaming products with SIGOS, compiling UAT results reports,
+          and conducting functional testing of core services (internet, voice, SMS, and roaming) on web & mobile apps.
+        </p>
+      </div>
+
+      <!-- Role 4 -->
+      <div class="p-6 rounded-2xl shadow-md bg-stone-200 dark:bg-gray-700 
+            hover:shadow-lg hover:scale-[1.02] transition duration-500">
+        <h3 class="text-xl font-semibold mb-2">QA Analyst/Product Development ✨ Agustus 2018 - Agustus 2021</h3>
+
+        <p class="text-stone-700 dark:text-gray-300 font-medium mb-3">
+          Astra Graphia Information Technology - Project: Telkomsel
+        </p>
+
+        <p class="space-y-1 text-stone-700 dark:text-gray-300">
+          Responsible for testing MyTelkomsel & MAXStream end-to-end testing applications (Web, iOS, Android),
+          collaborating with cross-functional teams to ensure feature readiness, validating entertainment services,
+          and using JIRA to manage bugs & progress until successful product deployment.
+        </p>
+      </div>
+
+      <!-- Role 5 -->
+      <div class="p-6 rounded-2xl shadow-md bg-stone-200 dark:bg-gray-700 
+            hover:shadow-lg hover:scale-[1.02] transition duration-500">
+        <h3 class="text-xl font-semibold mb-2">Quality Assurance Engineer ✨ April 2022 - April 2023</h3>
+
+        <p class="text-stone-700 dark:text-gray-300 font-medium mb-3">
+          Titipku
+        </p>
+
+        <p class="space-y-1 text-stone-700 dark:text-gray-300">
+        <p>
+          Developing and executing test plans in TestRail for Web & Mobile CMS, performing API testing with Postman
+          and data validation via MySQL, participating in Agile sprints with JIRA,
+          and ensuring product quality through regression testing until release to production.
+        </p>
+      </div>
+
+      <!-- Role 6 -->
+      <div class="p-6 rounded-2xl shadow-md bg-stone-200 dark:bg-gray-700 
+            hover:shadow-lg hover:scale-[1.02] transition duration-500">
+        <h3 class="text-xl font-semibold mb-2">Software QA Tester ✨ Januari - Oktober 2024</h3>
+
+        <p class="text-stone-700 dark:text-gray-300 font-medium mb-3">
+          LG CNS - Project: CTAS
+        </p>
+
+        <p class="space-y-1 text-stone-700 dark:text-gray-300">
+        <p>
+          Performing FVT, RFV, and regression testing on the Core Tax System, analyzing business processes
+          to ensure requirement compliance, and managing bugs with JIRA while collaborating
+          with developers, BAs, and related teams for integration validation.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Skills -->
+  <section id="skills" class="px-6 py-16 bg-stone-50 dark:bg-gray-800">
+    <h2 class="text-2xl font-bold text-center mb-10">Skills 🛠️</h2>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+
+      <!-- Contoh satu card skill -->
+      <div
+        class="p-4 bg-stone-100 dark:bg-gray-700 shadow-md rounded-2xl text-center font-medium 
+             transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-stone-200 dark:hover:bg-gray-600">
+        Critical Thinking
+      </div>
+
+      <div
+        class="p-4 bg-stone-100 dark:bg-gray-700 shadow-md rounded-2xl text-center font-medium 
+             transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-stone-200 dark:hover:bg-gray-600">
+        Manual Testing
+      </div>
+
+      <div
+        class="p-4 bg-stone-100 dark:bg-gray-700 shadow-md rounded-2xl text-center font-medium 
+             transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-stone-200 dark:hover:bg-gray-600">
+        Automation Testing
+      </div>
+
+      <div
+        class="p-4 bg-stone-100 dark:bg-gray-700 shadow-md rounded-2xl text-center font-medium 
+             transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-stone-200 dark:hover:bg-gray-600">
+        Test Planning
+      </div>
+
+      <div
+        class="p-4 bg-stone-100 dark:bg-gray-700 shadow-md rounded-2xl text-center font-medium 
+             transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-stone-200 dark:hover:bg-gray-600">
+        Python
+      </div>
+
+      <div
+        class="p-4 bg-stone-100 dark:bg-gray-700 shadow-md rounded-2xl text-center font-medium 
+             transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-stone-200 dark:hover:bg-gray-600">
+        HTML
+      </div>
+
+      <div
+        class="p-4 bg-stone-100 dark:bg-gray-700 shadow-md rounded-2xl text-center font-medium 
+             transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-stone-200 dark:hover:bg-gray-600">
+        CSS
+      </div>
+
+      <div
+        class="p-4 bg-stone-100 dark:bg-gray-700 shadow-md rounded-2xl text-center font-medium 
+             transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-stone-200 dark:hover:bg-gray-600">
+        JavaScript
+      </div>
+
+      <div
+        class="p-4 bg-stone-100 dark:bg-gray-700 shadow-md rounded-2xl text-center font-medium 
+             transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-stone-200 dark:hover:bg-gray-600">
+        Selenium
+      </div>
+
+      <div
+        class="p-4 bg-stone-100 dark:bg-gray-700 shadow-md rounded-2xl text-center font-medium 
+             transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-stone-200 dark:hover:bg-gray-600">
+        Playwright
+      </div>
+
+      <div
+        class="p-4 bg-stone-100 dark:bg-gray-700 shadow-md rounded-2xl text-center font-medium 
+             transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-stone-200 dark:hover:bg-gray-600">
+        Appium
+      </div>
+
+      <div
+        class="p-4 bg-stone-100 dark:bg-gray-700 shadow-md rounded-2xl text-center font-medium 
+             transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-stone-200 dark:hover:bg-gray-600">
+        XCUITest
+      </div>
+
+      <div
+        class="p-4 bg-stone-100 dark:bg-gray-700 shadow-md rounded-2xl text-center font-medium 
+             transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-stone-200 dark:hover:bg-gray-600">
+        Pytest
+      </div>
+
+      <div
+        class="p-4 bg-stone-100 dark:bg-gray-700 shadow-md rounded-2xl text-center font-medium 
+             transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-stone-200 dark:hover:bg-gray-600">
+        API Testing
+      </div>
+
+      <div
+        class="p-4 bg-stone-100 dark:bg-gray-700 shadow-md rounded-2xl text-center font-medium 
+             transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-stone-200 dark:hover:bg-gray-600">
+        MySQL
+      </div>
+
+      <div
+        class="p-4 bg-stone-100 dark:bg-gray-700 shadow-md rounded-2xl text-center font-medium 
+             transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-stone-200 dark:hover:bg-gray-600">
+        Allure Report
+      </div>
+
+      <!-- tinggal copy style di atas ke semua skill card -->
+
+    </div>
+  </section>
+
+
+  <!-- Social -->
+  <section id="social" class="px-6 py-16 text-center">
+    <h2 class="text-2xl font-bold mb-6">Find Me 🔗</h2>
+    <div class="flex justify-center gap-8 text-4xl">
+
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/ahmad-wikandono" target="_blank" rel="noreferrer"
+        class="hover:scale-110 transition-transform">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-10 h-10 text-blue-600 hover:text-blue-700"
+          viewBox="0 0 24 24">
+          <path d="M19 0h-14c-2.76 0-5 2.24-5 
+                 5v14c0 2.76 2.24 5 5 
+                 5h14c2.76 0 5-2.24 
+                 5-5v-14c0-2.76-2.24-5-5-5zm-11 
+                 19h-3v-10h3v10zm-1.5-11.29c-.96 
+                 0-1.75-.79-1.75-1.75s.79-1.75 
+                 1.75-1.75 1.75.79 
+                 1.75 1.75-.79 1.75-1.75 
+                 1.75zm13.5 11.29h-3v-5.6c0-1.34-.03-3.07-1.87-3.07-1.87 
+                 0-2.16 1.46-2.16 2.97v5.7h-3v-10h2.88v1.37h.04c.4-.76 
+                 1.38-1.55 2.84-1.55 3.04 0 
+                 3.6 2 3.6 4.59v5.59z" />
+        </svg>
+      </a>
+
+      <!-- GitHub -->
+      <a href="https://github.com/andowikandn" target="_blank" rel="noreferrer"
+        class="hover:scale-110 transition-transform">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+          class="w-10 h-10 text-gray-800 dark:text-gray-200 hover:text-black dark:hover:text-white" viewBox="0 0 24 24">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M12 .297c-6.63 0-12 5.373-12 
+                 12 0 5.303 3.438 9.8 8.205 
+                 11.385.6.113.82-.258.82-.577 
+                 0-.285-.01-1.04-.015-2.04-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.089-.745.083-.73.083-.73 
+                 1.205.084 1.84 1.237 1.84 
+                 1.237 1.07 1.835 2.809 1.305 
+                 3.495.998.108-.775.418-1.305.762-1.605-2.665-.3-5.466-1.334-5.466-5.932 
+                 0-1.31.468-2.38 1.236-3.22-.124-.303-.536-1.523.117-3.176 
+                 0 0 1.008-.322 3.3 1.23.957-.266 
+                 1.983-.399 3.003-.404 1.02.005 
+                 2.047.138 3.006.404 2.289-1.552 
+                 3.295-1.23 3.295-1.23.655 1.653.243 
+                 2.873.119 3.176.77.84 1.235 1.91 
+                 1.235 3.22 0 4.61-2.807 5.628-5.479 
+                 5.922.43.372.823 1.103.823 2.222 
+                 0 1.606-.015 2.898-.015 3.293 
+                 0 .319.216.694.825.576 
+                 4.765-1.585 8.2-6.082 8.2-11.385 
+                 0-6.627-5.373-12-12-12z" />
+        </svg>
+      </a>
+
+      <!-- Instagram -->
+      <a href="https://instagram.com/andowikandn" target="_blank" rel="noreferrer"
+        class="hover:scale-110 transition-transform">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-10 h-10 text-pink-500 hover:text-pink-600"
+          viewBox="0 0 24 24">
+          <path d="M12 2.163c3.204 0 3.584.012 
+                 4.85.07 1.366.062 2.633.35 
+                 3.608 1.325.975.975 1.263 
+                 2.242 1.325 3.608.058 1.266.07 
+                 1.646.07 4.85s-.012 3.584-.07 
+                 4.85c-.062 1.366-.35 2.633-1.325 
+                 3.608-.975.975-2.242 1.263-3.608 
+                 1.325-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.35-3.608-1.325-.975-.975-1.263-2.242-1.325-3.608C2.175 
+                 15.747 2.163 15.367 2.163 
+                 12s.012-3.584.07-4.85c.062-1.366.35-2.633 
+                 1.325-3.608.975-.975 2.242-1.263 
+                 3.608-1.325C8.416 2.175 8.796 
+                 2.163 12 2.163zm0 1.684c-3.17 
+                 0-3.548.012-4.796.07-1.054.048-1.63.222-2.007.37-.505.196-.865.43-1.247.812-.382.382-.616.742-.812 
+                 1.247-.148.377-.322.953-.37 
+                 2.007-.058 1.248-.07 1.626-.07 
+                 4.796s.012 3.548.07 4.796c.048 
+                 1.054.222 1.63.37 2.007.196.505.43.865.812 
+                 1.247.382.382.742.616 1.247.812.377.148.953.322 
+                 2.007.37 1.248.058 1.626.07 4.796.07s3.548-.012 
+                 4.796-.07c1.054-.048 1.63-.222 
+                 2.007-.37.505-.196.865-.43 
+                 1.247-.812.382-.382.616-.742.812-1.247.148-.377.322-.953.37-2.007.058-1.248.07-1.626.07-4.796s-.012-3.548-.07-4.796c-.048-1.054-.222-1.63-.37-2.007-.196-.505-.43-.865-.812-1.247-.382-.382-.742-.616-1.247-.812-.377-.148-.953-.322-2.007-.37-1.248-.058-1.626-.07-4.796-.07zm0 
+                 3.919a5.919 5.919 0 110 
+                 11.838 5.919 5.919 0 010-11.838zm0 
+                 1.684a4.235 4.235 0 100 
+                 8.47 4.235 4.235 0 000-8.47zm5.884-2.845a1.386 
+                 1.386 0 110 2.772 1.386 1.386 0 010-2.772z" />
+        </svg>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- Script Toggle -->
+  <script>
+    const toggleButton = document.getElementById("modeToggle");
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const backToTop = document.getElementById("backToTop");
+    const savedTheme = localStorage.getItem("theme");
+    const mobileLinks = document.querySelectorAll(".mobile-link");
+
+    // Load theme
+    if (savedTheme === "dark") {
+      document.documentElement.classList.add("dark");
+      toggleButton.textContent = "☀️";
+    }
+
+    // Toggle dark/light mode
+    toggleButton.addEventListener("click", () => {
+      document.documentElement.classList.toggle("dark");
+      const isDark = document.documentElement.classList.contains("dark");
+      toggleButton.textContent = isDark ? "☀️" : "🌙";
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+    });
+
+    // Toggle mobile menu
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    // Tutup menu otomatis saat klik link di mobile
+    mobileLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+    });
+  </script>
+
 </body>
 
 </html>
