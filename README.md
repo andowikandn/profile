@@ -1,1 +1,1 @@
-You can visit directly to https://andowikandn.github.io/profile/
+Go to directly https://andowikandn.github.io/profile/
